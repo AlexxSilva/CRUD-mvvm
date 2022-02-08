@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:nEntry="clr-namespace:LeoJHarris.FormsPlugin.Abstractions;assembly=LeoJHarris.FormsPlugin.Abstractions"
+             Title="Cadastro de produtos"
+             x:Class="CRUDmvvm.Views.CadastroDeProdutos">
+
+
+    <ContentPage.Content>
+        <StackLayout Padding="5" VerticalOptions="Center">
+            <nEntry:EnhancedEntry Placeholder="DescricaoProduto" Text="{Binding DescricaoProduto}" 
+                                  BorderColor="Silver" BorderWidth="1" FontFamily="MontserratLight"></nEntry:EnhancedEntry>
+            <nEntry:EnhancedEntry Placeholder="Unidade" Text="{Binding UnidadeProduto}" BorderColor="Silver"
+                                  BorderWidth="1" FontFamily="MontserratLight"></nEntry:EnhancedEntry>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="OK"  Command="{Binding OkCommand}" Style="{StaticResource Button}"></Button>
+                <Button Text="Cancelar" Command="{Binding CancelarCommand}"  Style="{StaticResource Button}"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
